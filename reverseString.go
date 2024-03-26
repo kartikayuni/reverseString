@@ -18,7 +18,7 @@ func reverseString(s []byte) {
 		s[2], s[len(s)-1-2] = s[len(s)-1-2], s[2]
 		fmt.Println(string(s))
 	*/
-	for i := 0; i < len(s)/2; i = i + 1 {
-		s[i], s[len(s)-1-i] = s[len(s)-1-i], s[i]
+	for i, k := 0, len(s)-1; i < k; i, k = i+1, k-1 {
+		s[i], s[k] = s[k], s[i]
 	}
 }
