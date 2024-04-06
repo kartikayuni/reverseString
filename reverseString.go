@@ -19,11 +19,9 @@ func reverseString(s []byte) {
 		fmt.Println(string(s))
 	*/
 	for i, k := 0, len(s)-1; ; i, k = i+1, k-1 {
-		if i < k {
-			s[i], s[k] = s[k], s[i]
-		} else {
+		if i > k {
 			break
 		}
-		//s[i], s[k] = s[k], s[i]
+		s[i], s[k] = s[k], s[i]
 	}
 }
